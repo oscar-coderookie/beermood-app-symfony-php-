@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %} {% block body %}
+{% block styles %}
+<link rel="stylesheet" href="/css/styles-altern.css" />
+{% endblock %}
+<div class="container-beers">
+
+  <h1 class="beers-title">Beers Listing</h1>
+  <div class="container-xl">
+    <div class="row">
+      {% for beer in beers %}
+      <div class="col-sm-12 col-md-6 col-lg-3 mx-auto my-2">
+        <div class="card">
+          <div class="edit-container">
+            {# <a class="edit-icon fas fa-edit" href="/edit"></a> #}
+          
+            <a class="edit-icon fas fa-eraser" href="{{ path('deleteBeer', { id: beer.id }) }}"></a>
+          </div>
+          <a href="{{ path('beer', { id: beer.id }) }}">
+            <img class="card-beers__img" src="{{ beer.image }}" alt="{{ beer.name }}" />
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

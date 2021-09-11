@@ -1,0 +1,428 @@
+/* Imports Fonts from Google: */
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap');
+
+/* Header: */
+.header-bar {
+  /* background: rgb(255, 255, 255); */
+  
+  width: 100%;
+  z-index: 100;
+
+}
+.header-logo {
+  height: 40px;
+  margin-left: 15px;
+  animation: rotationLogo 3s ease infinite;
+}
+.header-title-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-icons{
+  font-size: 30px;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all .1s ease-in;
+}
+.header-icons:hover{
+  color: white;
+  text-shadow: 0px 0px 4px black;
+}
+.header-title {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(0px 0px 3px black);
+  padding: 0;
+  margin:0;
+}
+.header-links{
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(236, 236, 236);
+  
+  height: 100%;
+}
+.header-icons:hover{
+  
+  color: rgb(199, 165, 12);
+  
+}
+.header-logo-2 {
+  height: 40px;
+  margin: 0 6px;
+  animation: rotationLogo2 3s ease infinite;
+}
+
+.header-icon{
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif ;
+}
+
+/* Section Home: */
+.home-hero {
+  background: url('https://firebasestorage.googleapis.com/v0/b/api-rest-curriculum-oscar.appspot.com/o/PORTFOLIO%2FWEB-DEVELOPMENT%2FBeer-Mood%2Fhome-xl.jpg?alt=media&token=6b6c5e28-39cc-4054-8c79-cc99658f875b');
+  height: calc(100vh - 29px);
+  background-position: center;
+  background-size: cover;
+  font-family: "Julius Sans One", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.home-hero:hover > .home-hover {
+  visibility: visible;
+}
+.home-title {
+  font-size: 80px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: url('https://style.shockvisual.net/wp-content/uploads/2019/10/beer-background-ZC2QTEK.jpg');
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home-subtitle{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 500;
+  
+}
+.container-text-logo{
+  z-index: 100;
+}
+.logo-img1,
+.logo-img2{
+  width: 2;
+  margin: 30px 20px;
+
+}
+.logo-img1{
+  animation: rotationLogo 3s ease infinite;
+}
+.logo-img2{
+  animation: rotationLogo2 3s ease infinite;
+}
+
+/* Section Beers: */
+.container-beers{
+  padding-top: 80px;
+  height: calc(100vh - 29px) ;
+  background-size: cover;
+  
+}
+.beer-detail-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 29px);
+}
+
+.beer-titles{
+  font-size: 18px;
+  font-weight: 500;
+}
+.beer-pars{
+  font-size: 16px;
+  font-weight: 400;
+}
+.card-beers{
+  height: 300px;
+  border: none;
+  position: relative;
+}
+.card-beers__img{
+  object-fit: cover;
+  width: 100%;
+  height:330px;
+}
+.beers-title{
+  text-align: center;
+  font-size: 68px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Julius Sans One", sans-serif;
+}
+.edit-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-right: 20px;
+}
+.edit-icon{
+  font-size: 18px;
+  text-decoration: none;
+  margin: 10px 5px;
+  color: black;
+}
+
+/* Section Post: */
+.form-container{
+  background: url('https://firebasestorage.googleapis.com/v0/b/api-rest-curriculum-oscar.appspot.com/o/PORTFOLIO%2FWEB-DEVELOPMENT%2FBeer-Mood%2Fform-xl.jpg?alt=media&token=39e6891e-d7b0-4250-939e-db0b9bbbdc37');
+  height: calc(100vh - 29px);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container__description{
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  padding: 15px;
+  font-weight: 400;
+}
+.form-body{
+  background: none;
+  margin: 10px;
+}
+.form-card{
+  border: none;
+  background: rgba(255, 255, 255, 0.315);
+  overflow: hidden;
+}
+
+.form__title{
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(255, 213, 73);
+  color: rgb(107, 107, 107);
+  padding: 20px 0px;
+  font-weight: 600;
+}
+.form-inputs{
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.445);
+  color: white;
+  border-radius: 0;
+  background: none;
+}
+.form-inputs::placeholder{
+  color: white;
+}
+.form-control:focus, .form-control:active {
+  background: transparent;
+  border: none;
+  color: white
+}
+.form-fieldsets{
+  border: none;
+  outline: none;
+ 
+}
+
+.form__img-container{
+  overflow: hidden;
+}
+.form-img{
+  width: 100%;
+}
+.form-btn{
+  background-color: rgb(255, 213, 73);
+  border: none;
+  color: rgb(107, 107, 107);
+  font-weight: 600;
+  padding: 16px 0px;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+.form-btn:hover{
+  background-color: rgb(248, 194, 15);
+  color: white;
+  filter: drop-shadow(0px 0px 4px black);
+  animation: gradientMove 6s ease infinite;
+}
+/* Register: */
+.register-form{
+  height:calc(100vh - 29px);
+  display: flex;
+  align-items: center;
+ 
+}
+/* Login: */
+.login-form{
+  height: calc(100vh - 29px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Footer: */
+.footer-block{
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+}
+.footer-nav{
+  display: flex;
+  padding: 15px 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer-copyright{
+  text-align: center;
+  font-size: 14px;
+  height: 29px;
+  background:linear-gradient(to right, rgb(73, 73, 73), rgb(71, 71, 71) ,rgb(27, 27, 27));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright-link{
+  text-decoration: none;
+  font-weight: 400;
+  padding:0;
+  
+  margin:0;
+  color: rgb(189, 189, 189);;
+  transition: all .3s ease;
+}
+.copyright-link:hover{
+  color: white;
+
+}
+.copyright-legend{
+ 
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  text-decoration: none;
+  color: rgb(189, 189, 189);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .menu-mobile{
+    background: rgba(255, 255, 255, 0.438);
+  }
+  .header-links:hover{
+    background: rgb(255, 213, 73);
+    border-bottom: none;
+    
+  }
+  .container-beers{
+    height: auto;
+  }
+  .form-container__description{
+    font-size: 24px;
+  }
+  .home-title{
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+
+  .home-hero {
+    background: url(/img/home-responsive-768px.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .home-title {
+    font-size: 58px;
+    margin-top: 40px;
+    background-size: cover;
+  }
+  .beer-detail-block{
+    height: auto;
+  }
+  .logo-img1,
+  .logo-img2{
+    width: 1;
+    margin: 10px 10px;
+  }
+  .card-beers{
+    height: 500px;
+    margin: 15px 0px;
+    background-size: cover;
+    
+  }
+  
+  .card-beers__img{
+    object-fit: cover;
+    height: 100%;
+  }
+  .form-container{
+    background: url('https://firebasestorage.googleapis.com/v0/b/api-rest-curriculum-oscar.appspot.com/o/PORTFOLIO%2FWEB-DEVELOPMENT%2FBeer-Mood%2Fform-md.jpg?alt=media&token=597dfb92-1b8b-42ce-8e70-ec051f5ef805');
+    background-position: center;
+    background-size: cover;
+  }
+  
+}
+@media (max-width: 576px){
+  .form-container{
+    background: url('https://firebasestorage.googleapis.com/v0/b/api-rest-curriculum-oscar.appspot.com/o/PORTFOLIO%2FWEB-DEVELOPMENT%2FBeer-Mood%2Fform-mobile.jpg?alt=media&token=6c68f012-3520-442f-a2e6-1784a443e369');
+    background-size: cover;
+    background-position: center;
+
+  }
+  .home-hero{
+    align-items: flex-end;
+    
+  }
+  .container-text-logo{
+    margin-bottom: 90px;
+  }
+
+  .home-title{
+    font-size: 50px ;
+  }
+  .home-subtitle{
+    font-size: 24px;
+  }
+}
+
+/* Animations: */
+@keyframes rotationLogo {
+  50% {
+    transform: rotateZ(35deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes rotationLogo2 {
+  50% {
+    transform: rotateZ(-35deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes gradientMove {
+  0%{
+    background-image: linear-gradient(90deg, rgb(248, 194, 15), rgb(255, 220, 103), rgb(248, 194, 15));
+    background-position-x: 0px ;
+
+
+  }
+  50%{
+    background-image: linear-gradient(90deg, rgb(248, 194, 15), rgb(255, 220, 103), rgb(248, 194, 15));
+    background-position-x: 500px ;
+
+
+  }
+  100%{
+    background-position-x: 10px ;
+
+  }
+  
+}

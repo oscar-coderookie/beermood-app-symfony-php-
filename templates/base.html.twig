@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Beer Mood {% endblock %}</title>
+
+    {% block stylesheets %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    {% endblock %} {% block javascripts %}
+    <script src="https://kit.fontawesome.com/3eba8df060.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+              var sound = new Audio();
+              sound.src =
+                "https://firebasestorage.googleapis.com/v0/b/api-rest-curriculum-oscar.appspot.com/o/sound-beer.mp3.mp3?alt=media&token=d5f37d00-5799-40b7-bee4-12dc2d917875";
+            </script>
+    {% endblock %}
+    {% block styles %}
+    {% endblock %}
+  </head>
+  <body>
+    {% block header %}
+    <header class="navbar navbar-expand-lg  header-bar p-0">
+      <div class="container-fluid p-0">
+        <a class="header-title-container navbar-brand" href="/">
+          <img class="header-logo" src="/img/beer-logo-home.png" alt="logo" />
+          <img class="header-logo-2" src="/img/beer-logo-home-2.png" alt="logo" />
+          <h1 class="header-title">BeerMood</h1>
+        </a>
+        <div class="container-links">
+        {% if is_granted('ROLE_USER') %}
+        <a class="header-icons fas fa-home" href="{{ path('home') }}" title="Home"></a>
+        <a class="header-icons fas fa-beer" href="{{ path('beers') }}" title="Blog of beers"></a>
+        <a class="header-icons fas fa-plus-square" href="{{ path('post') }}" title="Post your beer.."></a>
+        <a class="header-icons fas fa-volume-up" onclick="sound.play()" title="Cheers"></a>
+        <a class="header-icons fas fa-sign-out-alt" href="{{ path('app_logout') }}" title="Sign-out"></a>
+        {% else %}
+        <a class="header-icons fas fa-sign-in-alt" href="{{ path('login') }}" title="Sign-in"></a>
+        <a class="header-icons fas fa-user-plus" href="{{ path('user_create') }}" title="Register"></a>
+        {% endif %}
+        </div>
+        
+
+      
+        </div>
+      </div>
+    </header>
+    {% endblock %} {% block body %} {% endblock %} {% block footer %}
+    <footer class="footer-block">
+      {# <nav class="footer-nav">
+        <a class="footer-icons fas fa-home" href="{{ path('home') }}"></a>
+        <a class="footer-icons fas fa-beer" href="{{ path('beers') }}"></a>
+        <a class="footer-icons fas fa-plus-square" href="{{ path('post') }}"></a>
+      </nav> #}
+      <div class="footer-copyright">
+        <p class="copyright-legend">Developed with <span class="fab fa-symfony"></span> <a class="copyright-link" href="https://github.com/oscar-coderookie" target="_blank">2021 - ©Serna Carvajal</a></p>
+      </div>
+    </footer>
+    {% endblock %}
+  </body>
+</html>

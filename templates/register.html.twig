@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block styles %}
+	<link rel="stylesheet" href="/css/styles-altern.css"/>
+{% endblock %}
+{% block body %}
+	<div class="register-form ">
+		<div class="container-xl">
+			<div class="row">
+				<div class="col-8 mx-auto">
+					{{ form_start(userForm) }}
+					{{ form_widget(userForm) }}
+					<button type="submit">Register</button>
+					{{ form_end(userForm) }}
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,3 @@
+# hello:
+#    path: /hola
+#    controller: App\Controller\DefaultController::hola

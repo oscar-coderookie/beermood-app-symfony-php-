@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %} {% block body %}
+{% block styles %}
+<link rel="stylesheet" href="/css/styles-altern.css" />
+{% endblock %}
+<div class="beer-detail-block">
+  <div class="container-xl">
+    <div class="row mt-4">
+      <div class="col-sm-12 col-md-6 mx-auto mt-4">
+        <div style="border:none" class="card ">
+            <div class="card-header border-light bg-transparent">
+                <h2 class="text-center">{{beer.name}}</h2>
+            </div>
+          <img class="mx-auto" style="width: 300px;height: 496px; object-fit:cover;" src="{{ beer.image }}" alt="{{ beer.name }}-image" />
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 mx-auto">
+        <div class="card border-light">
+          <div class="card-body">
+            <h4 class="beer-titles">Description</h4>
+            <p class="beer-pars">{{ beer.ingredients }}</p>
+            <h4 class="beer-titles">Alcohol Vol.</h4>
+            <p class="beer-pars">{{ beer.alcoholVol }}% vol.</p>
+            <h4 class="beer-titles">Price</h4>
+            <p class="beer-pars">{{ beer.price }} €</p>
+            <h4 class="beer-titles">Content (cc or ml)</h4>
+            <p class="beer-pars">{{ beer.content }} ml.</p>
+            <h4 class="beer-titles">Origin(Country)</h4>
+            <p class="beer-pars">{{ beer.origin }} ml.</p>
+            <h4 class="beer-titles">Hops</h4>
+            <p class="beer-pars">{{ beer.hops }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

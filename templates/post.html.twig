@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %} {% block body %}
+<div class="form-container ">
+
+  <div class="container-xl ">
+    
+    <div class="row ">
+     
+      <div class="form-card card col-sm-10 col-md-8 col-lg-6 px-0 mx-auto">
+      <p class="form-container__description">
+  Share your Beer experience with us, leaving a feed in the next form:
+    </p>
+        
+        <form class="form-body" method="POST" accept-charset="UTF-8">
+          <fieldset class="form-fieldset">
+            <input class="form-inputs form-control my-2" type="text" name="name" placeholder="Name" />
+          </fieldset>
+          <fieldset class="form-fieldset">
+            <input class="form-inputs form-control my-2" type="text" name="image" placeholder="Image URL" />
+          </fieldset>
+          <fieldset class="form-fieldset">
+            <input class="form-inputs form-control my-2" type="number" step="0.01" name="price" placeholder="Price" />
+          </fieldset>
+          <fieldset class="form-fieldset">
+            <input class="form-inputs form-control my-2" type="number" name="content" placeholder="Content" />
+          </fieldset>
+          <fieldset class="form-fieldset">
+            <input
+              class="form-inputs form-control my-2"
+              type="number"
+              step="0.1"
+              name="alcohol_vol"
+              placeholder="Alcohol Vol."
+            />
+          </fieldset>
+          <fieldset class="form-fieldset">
+            <input class="form-inputs form-control my-2" type="text" name="origin" placeholder="Origin" />
+          </fieldset>
+          <fieldset class="form-fieldset">
+            <textarea
+              class="form-inputs form-control my-2"
+              type="text"
+              name="ingredients"
+              placeholder="Description"
+              style="height: 100px"
+            ></textarea>
+          </fieldset>
+          <fieldset class="form-fieldset">
+            <input class="form-inputs form-control my-2" type="text" name="hops" placeholder="Hops" />
+          </fieldset>
+          <button class=" form-btn w-100" type="submit">Save Beer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
